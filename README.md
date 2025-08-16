@@ -16,3 +16,11 @@ SFXENGINE_API_KEY=xxxx
 ```sh
 deno -A createSound.js 3 "ringtone"
 ```
+
+```sh
+deno -A createSong.js "脳をトレーニングしよう"
+```
+
+```sh
+deno -A createBGM.js "パズルゲームのBGM"
+```

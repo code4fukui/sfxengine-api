@@ -54,9 +54,6 @@ export const fetchSound = async (body, sec) => {
 };
 
 if (import.meta.main) {
-  //console.log(await getSound("se_jgpkizuqjjq24zjt"));
-  
-  
   const sec = Deno.args[0];
   const body = Deno.args[1];
   if (!body || !sec) {
@@ -64,20 +61,5 @@ if (import.meta.main) {
     Deno.exit(1);
   }
   const res = await fetchSound(body, sec);
-  await Deno.writeFile("res.wav", res);
-  
-  /*
-  {
-    id: "se_fq7gzalbuf4fzuuz",
-    prompt: "間違った選択をしたときの音",
-    createdAt: "2025-08-16T21:19:51.896",
-    length: 3,
-    url: "",
-    fileSize: -1,
-    isPublic: false,
-    status: "processing",
-    imageUrl: null,
-    userId: "u_uxodmqnx4bnhh2od"
-  }
-  */
+  await Deno.writeFile("sound.wav", res);
 }
